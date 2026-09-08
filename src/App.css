@@ -1,59 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 body {
   font-family: Inter;
-  margin: 0
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.253)
-}
-
-.title {
-  margin-left: 10%;
-  cursor: pointer;
-}
-
-.search {
-  width: 20%;
-
-}
-.search input {
-  padding: 2%;
-  width: 100%;
-  background-color: rgba(128, 128, 128, 0.075);
-  border: none;
-  border-radius: 3px;
-}
-
-.buttons {
-  margin-right: 10%;
-  width: 15%;
-  display: flex;
-  justify-content: space-between;
-}
-.buttons button {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.subheader {
-  border-bottom: 1px solid rgba(128, 128, 128, 0.253);
-} 
-
-.select-page {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* background-color: red; */
-  width: 40%;
-  margin-left: 10%;
-}
-.select-page h1 {
-  font-size: 80%;
-  color: gray;
-  cursor: pointer;
+  margin: 0;
+  display: flexbox;
 }

@@ -1,0 +1,15 @@
+.categories-container {
+    width: 50%;
+    margin-left: 10%;
+}
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.categories img {
+    width: 90%;
+}
