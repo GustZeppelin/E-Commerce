@@ -2,11 +2,19 @@ import '../css/categories.css'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
+    interface Product {
+        id: number
+        title: string
+        price: number
+        rating: number
+        thumbnail: string
+    }
+
 
 
 function Categories() {
-    
-    const [products, setProducts] = useState()
+   
+    const [products, setProducts] = useState<Product[]>([])
 
     const getProducts = async (): Promise<void> => {
         try {
@@ -20,15 +28,35 @@ function Categories() {
     useEffect(() => {
         getProducts()
     }, [])
-
+    
     return (
         <div className="categories-container">
             <h1>Compre por categoria</h1>
             <div className="categories">
-                <div className='categorie'>{products && <img src={products[2].thumbnail}></img>}<p>Máscaras</p></div>
-                <div className='categorie'>{products && <img src={products[3].thumbnail}></img>}<p>Batons</p></div>
-                <div className='categorie'>{products && <img src={products[4].thumbnail}></img>}<p>Esmaltes</p></div>
-                <div className='categorie'>{products && <img src={products[5].thumbnail}></img>}<p>Perfumes</p></div>
+                {products.slice(0, 4).map((product: Product) => (
+                    <div className='categorie' key={product.id}>
+                        <img src={product.thumbnail} alt="image" />
+                    </div>
+                ))}
+            </div>
+            <div className="best-sellers">
+                <h1>Mais Vendidos</h1>
+                <div className='categories'>
+                    {products.slice(4, 8).map((product: Product) => (
+                        <div className="product" key={product.id}>
+                            <div className="product-img">
+                                <img src={product.thumbnail} alt="image" />
+                            </div>
+                            <div className="product-name">
+                                <p className='name'>{product.title}</p>
+                            </div>
+                            <div className='price-rating'>
+                                <p className='price'>R${product.price}</p>
+                                <p className='rating'>{product.rating}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>                                  
             </div>
         </div>
     )

@@ -4,7 +4,8 @@
   margin-top: 1%;
   margin-left: 10%;
   position: relative;
-
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 .slide > * {
     grid-area: 1 / 1;

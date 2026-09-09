@@ -4,7 +4,7 @@ import Carrinho from '../assets/image-slide/image2.jpg'
 import Espuma from '../assets/image-slide/image3.jpg'
 import Mascara from '../assets/image-slide/image4.jpg'
 import RightIcon from '../assets/ChevronRight.svg'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 function Carousel() {
@@ -29,6 +29,14 @@ const prevImage = (): void => {
         setCurrentImage(prev => prev - 1)
     }
 }
+
+useEffect(() => {
+        const interval = setInterval(() => {
+            nextImage();
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [currentImage]);
+
     return (
         <div className="slide">
             <img src={images[currentImage]}/>
