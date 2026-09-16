@@ -1,14 +1,15 @@
 import './App.css'
 import Header from './components/Header'
-import Carousel from './components/Carousel'
 import Categories from './components/Categories'
+import FeaturedSection from './components/FeaturedSection'
 
 function App() {
   return (
     <div>
-      < Header/>
-      < Carousel/>
-      < Categories/>
+      <Header/>
+      <FeaturedSection/>
+      <Categories/>
+      
     </div>
   )
 }

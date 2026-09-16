@@ -1,6 +1,9 @@
 import '../css/categories.css'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { IoMdHeartEmpty } from "react-icons/io";
+import { IoHeart } from "react-icons/io5";
+import { CiStar } from "react-icons/ci";
 
     interface Product {
         id: number
@@ -8,6 +11,8 @@ import { useEffect, useState } from 'react'
         price: number
         rating: number
         thumbnail: string
+        category: string
+        discountPercentage :number
     }
 
 
@@ -28,14 +33,24 @@ function Categories() {
     useEffect(() => {
         getProducts()
     }, [])
+
+    const uniqueCategories = products.filter(
+        (product, index, self) =>
+            index === self.findIndex((p) => p.category === product.category)
+    ).slice(0, 4);
     
+    const applyDiscount = (product: Product) => {
+        const discount = (product.price * product.discountPercentage) / 100
+    } 
+
     return (
         <div className="categories-container">
             <h1>Compre por categoria</h1>
             <div className="categories">
-                {products.slice(0, 4).map((product: Product) => (
+                {uniqueCategories.map((product: Product) => (
                     <div className='categorie' key={product.id}>
                         <img src={product.thumbnail} alt="image" />
+                        <p>{product.category}</p>
                     </div>
                 ))}
             </div>
@@ -44,15 +59,22 @@ function Categories() {
                 <div className='categories'>
                     {products.slice(4, 8).map((product: Product) => (
                         <div className="product" key={product.id}>
+                            <div className='rating-heart'>
+                                <p className='disable'><IoMdHeartEmpty /></p>
+                                <p className='fav'><IoHeart /></p>
+                            </div>
                             <div className="product-img">
                                 <img src={product.thumbnail} alt="image" />
                             </div>
                             <div className="product-name">
                                 <p className='name'>{product.title}</p>
                             </div>
-                            <div className='price-rating'>
-                                <p className='price'>R${product.price}</p>
-                                <p className='rating'>{product.rating}</p>
+                            <div className="div-rating">
+                                <CiStar /><p className='rating'>{product.rating}</p>
+                            </div>
+                            <div className='price'>
+                                <b className='price-value-after-discount'>R$ {(product.price - (product.price * product.discountPercentage / 100)).toFixed(2) }</b>
+                                <p className='price-value'>R$ {product.price}</p>
                             </div>
                         </div>
                     ))}

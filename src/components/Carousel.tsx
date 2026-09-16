@@ -1,4 +1,4 @@
-import '../css/carousel.css'
+
 import Batom from '../assets/image-slide/image1.jpg'
 import Carrinho from '../assets/image-slide/image2.jpg'
 import Espuma from '../assets/image-slide/image3.jpg'
