@@ -1,11 +1,11 @@
 .categories-container {
-    width: 50%;
-    margin-left: 10%;
-  
+    width: 100%;
 }
+
 .categories-container h1 {
-      font-size: 120%;
+    font-size: 130%;
 }
+
 .categories {
     display: flex;
     justify-content: center;
@@ -15,67 +15,127 @@
 }
 
 .categories img {
-    width: 90%;
+    width: 80%;
 }
+
 .categorie {
     margin-right: 1%;
 }
 
+.best-sellers {
+    width: 55%;
+    margin-left: 10%;
+    /* background-color: aqua; */
+}
+
+.best-sellers h1 {
+    font-size: 130%;
+}
+
+.products {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    /* margin-left: 5%; */
+    gap: 4px;
+}
+
+.products img {
+    width: 80%;
+}
+
 .product {
-    -webkit-box-shadow: 1px 1px 50px 5px rgba(0, 0, 0, 0.100);
+    width: 20%;
+    height: 220px;
+    box-shadow: 1px 1px 50px 5px rgba(0, 0, 0, 0.100);
     border-radius: 15px;
-    margin-right: 1%;
+    margin-left: 1%;
     margin-bottom: 3%;
-    /* padding: 3%; */
     cursor: pointer;
     position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
 }
+
 .product-img {
     width: 60%;
-    margin: auto;
-    margin-top: 4%;
-    height: 60%;
-}
-.product-name {
+    height: 90px;
+    margin: 4% auto 0;
     display: flex;
-    margin-left: 5%;
+    align-items: center;
+    justify-content: center;
 }
+
+.product-img img {
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-name {
+    width: 100%;
+    height: 21px;
+
+    overflow: hidden;
+}
+
+.name {
+    width: 100%;
+    height: 20px;
+    margin: 0;
+    padding-left: 5%;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+.div-rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 30px;
+    color: rgb(241, 206, 6);
+    margin-right: 3%;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+.rating {
+    margin: 0;
+}
+
 .price {
     text-align: initial;
     margin-left: 5%;
     margin-bottom: 5%;
 }
+
+.price-value-after-discount {
+    display: block;
+    margin: 0 0 3px 0;
+}
+
 .price-value {
     text-decoration: line-through;
     color: rgba(0, 0, 0, 0.616);
     margin: 0;
 }
-.price-value-after-discount {
-    margin-bottom: 10%;
-}
 
-.name {
-    text-align: left;
-}
-.div-rating {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    color: rgb(241, 206, 6);
-    margin-right: 3%;
-    padding: 1%;
-}
 .rating-heart {
     position: absolute;
     top: -3%;
     right: 5%;
     font-size: 150%;
 }
+
 .fav {
-    color: red;
+    color: rgb(255, 0, 0);
 }
+
 .disable {
     display: none;
 }
-
-

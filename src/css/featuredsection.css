@@ -1,22 +1,28 @@
 .featuredsection-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-.slide {
-  width: 50%;
-  height: 30%;
+.slide-container {
+  width: 55%;
   margin-top: 1%;
   margin-left: 10%;
+
+}
+.slide {
+  width: 100%;
+  height: 380px;
   position: relative;
   display: flex;
   transition: transform 0.5s ease-in-out;
+  overflow: hidden;
 }
 .slide > * {
     grid-area: 1 / 1;
 }
 .slide img {
-  max-width: 100%;
-  object-fit: fill;
+  width: 100%;
+  object-fit: cover;
   border-radius: 15px;
 }
 .slide-btn {
@@ -49,6 +55,7 @@
   margin-right: 10%;
   margin-top: 1%;
   /* background-color: antiquewhite; */
+  height: 600px;
   width: 20%;
   border-radius: 15px;
   border: solid 1px rgba(0, 0, 0, 0.100);
@@ -91,7 +98,7 @@
 
   display: flex;
   justify-content: center;
-  margin-top: 7%;
+  margin-top: 20%;
 }
 .button-buy  button {
   width: 80%;
