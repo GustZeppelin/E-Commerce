@@ -3,33 +3,45 @@
     display: flex;
     justify-content: space-between;
     /* background-color: aquamarine; */
-    width: 90%;
+    width: 100%;
 }
-
+.container-benefits {
+    width: 22.5%;
+    margin-top: 3%;
+    margin-right: 10%;
+}
 .benefits {
     border: 1px solid black;
-    width: 100%;
+    width: 90%;
     border: solid 1px rgba(0, 0, 0, 0.100);
     border-radius: 15px;
     /* background-color: aqua; */
+    margin-left: 10%;
 }
 
 .benefit {
     display: flex;
-    font-size: 12px;
+    font-size: 80%;
 }
 .benefits h1 {
-    font-size: 18px;
+    font-size: 110%;
 }
 .icon {
-    font-size: 350%;
     display: flex;
     justify-content: center;
     background-color: rgba(136, 46, 221, 0.5);
+    width: 15%;
+    height: 6vh;
     margin: auto;
     margin-right: 10%;
     margin-left: 10%;
     color: rgb(137, 14, 148);
     border-radius: 5px;
     /* width: 40%; */
+}
+.icon p {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    font-size: 220%;
 }

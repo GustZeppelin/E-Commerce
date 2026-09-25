@@ -3,6 +3,7 @@ import Header from './components/Header'
 // import Categories from './components/Categories'
 import FeaturedSection from './components/FeaturedSection'
 import SecondSection from './components/SecondSection'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <FeaturedSection />
       <SecondSection />
+      <Footer />
     </div>
   )
 }

@@ -9,7 +9,7 @@ function Benefits() {
         <div className="benefits">
             <div className="benefit">
                 <div className="icon">
-                <CiDeliveryTruck />
+                <p><CiDeliveryTruck /></p>
             </div>
             <div className="text">
                 <h1>Frete grátis</h1>
@@ -18,7 +18,7 @@ function Benefits() {
             </div>
             <div className="benefit">
                 <div className="icon">
-                    <SlRefresh />
+                    <p><SlRefresh /></p>
                 </div>
                 <div className="text">
                     <h1>Troca Fácil</h1>
@@ -27,7 +27,7 @@ function Benefits() {
             </div>
              <div className="benefit">
                 <div className="icon">
-                    <GoShieldCheck />
+                    <p><GoShieldCheck /></p>
                 </div>
                 <div className="text">
                     <h1>Compra segura</h1>
